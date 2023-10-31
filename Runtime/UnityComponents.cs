@@ -1,11 +1,14 @@
-﻿using Depra.Ecs.Worlds;
+﻿// SPDX-License-Identifier: Apache-2.0
+// © 2023 Nikolay Melnikov <n.melnikov@depra.org>
+
+using Depra.Ecs.Worlds;
 
 namespace Depra.Ecs.Components.Runtime
 {
 	public sealed class UnityComponents : IWorldRegistry
 	{
-		internal ComponentPool<RigidbodyRef> Rigidbodies { get; private set; }
-		internal ComponentPool<CharacterControllerRef> CharacterControllers { get; private set; }
+		public ComponentPool<RigidbodyRef> Rigidbodies { get; private set; }
+		public ComponentPool<CharacterControllerRef> CharacterControllers { get; private set; }
 
 		void IWorldRegistry.Initialize(World world)
 		{
