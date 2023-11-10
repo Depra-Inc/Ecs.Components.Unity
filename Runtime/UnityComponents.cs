@@ -8,6 +8,7 @@ namespace Depra.Ecs.Components
 	public sealed class UnityComponents : IWorldRegistry
 	{
 		public ComponentPool<CameraRef> Cameras { get; private set; }
+		public ComponentPool<AnimatorRef> Animators { get; private set; }
 		public ComponentPool<RigidbodyRef> Rigidbodies { get; private set; }
 		public ComponentPool<CharacterControllerRef> CharacterControllers { get; private set; }
 
@@ -15,6 +16,7 @@ namespace Depra.Ecs.Components
 		{
 			world.AddRegistry(this);
 			world.AddPool(Cameras = new ComponentPool<CameraRef>());
+			world.AddPool(Animators = new ComponentPool<AnimatorRef>());
 			world.AddPool(Rigidbodies = new ComponentPool<RigidbodyRef>());
 			world.AddPool(CharacterControllers = new ComponentPool<CharacterControllerRef>());
 		}
