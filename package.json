@@ -1,6 +1,6 @@
 {
 	"name": "com.depra.ecs.components",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"displayName": "Depra.Ecs.Components",
 	"description": "Components for Unity types.",
 	"unity": "2022.3",
