@@ -1,3 +1,16 @@
-﻿{
-  "name": "Depra.Ecs.Components"
+{
+    "name": "Depra.Ecs.Components",
+    "rootNamespace": "Depra.Ecs.Components",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Depra.Ecs.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
