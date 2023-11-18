@@ -11,6 +11,7 @@ namespace Depra.Ecs.Components
 		public ComponentPool<AnimatorRef> Animators { get; private set; }
 		public ComponentPool<RigidbodyRef> Rigidbodies { get; private set; }
 		public ComponentPool<LineRendererRef> LineRenderers { get; private set; }
+        public ComponentPool<RigidbodyForceMode> ForceModes { get; private set; }
 		public ComponentPool<CharacterControllerRef> CharacterControllers { get; private set; }
 
 		void IWorldRegistry.Initialize(World world)
@@ -20,6 +21,7 @@ namespace Depra.Ecs.Components
 			world.AddPool(Animators = new ComponentPool<AnimatorRef>());
 			world.AddPool(Rigidbodies = new ComponentPool<RigidbodyRef>());
 			world.AddPool(LineRenderers = new ComponentPool<LineRendererRef>());
+			world.AddPool(ForceModes = new ComponentPool<RigidbodyForceMode>());
 			world.AddPool(CharacterControllers = new ComponentPool<CharacterControllerRef>());
 		}
 
