@@ -9,6 +9,7 @@ namespace Depra.Ecs.Components
 	{
 		public ComponentPool<CameraRef> Cameras { get; private set; }
 		public ComponentPool<AnimatorRef> Animators { get; private set; }
+		public ComponentPool<TransformRef> Transforms { get; private set; }
 		public ComponentPool<RigidbodyRef> Rigidbodies { get; private set; }
 		public ComponentPool<LineRendererRef> LineRenderers { get; private set; }
         public ComponentPool<RigidbodyForceMode> ForceModes { get; private set; }
@@ -19,6 +20,7 @@ namespace Depra.Ecs.Components
 			world.AddRegistry(this);
 			world.AddPool(Cameras = new ComponentPool<CameraRef>());
 			world.AddPool(Animators = new ComponentPool<AnimatorRef>());
+			world.AddPool(Transforms = new ComponentPool<TransformRef>());
 			world.AddPool(Rigidbodies = new ComponentPool<RigidbodyRef>());
 			world.AddPool(LineRenderers = new ComponentPool<LineRendererRef>());
 			world.AddPool(ForceModes = new ComponentPool<RigidbodyForceMode>());
