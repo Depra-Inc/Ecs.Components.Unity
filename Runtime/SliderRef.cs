@@ -1,12 +1,12 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
 // © 2023 Nikolay Melnikov <n.melnikov@depra.org>
 
-using UnityEngine;
+using UnityEngine.UI;
 
 namespace Depra.Ecs.Components
 {
-	public struct RigidbodyRef
+	public struct SliderRef
 	{
-		public Rigidbody Value;
+		public Slider Value;
 	}
 }
