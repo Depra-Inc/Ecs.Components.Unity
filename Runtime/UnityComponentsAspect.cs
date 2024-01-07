@@ -1,11 +1,11 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
 
 using Depra.Ecs.Worlds;
 
 namespace Depra.Ecs.Components
 {
-	public sealed class UnityComponents : IWorldRegistry
+	public sealed class UnityComponentsAspect : IComponentAspect
 	{
 		public ComponentPool<CameraRef> Cameras { get; private set; }
 		public ComponentPool<SliderRef> Sliders { get; private set; }
@@ -16,9 +16,9 @@ namespace Depra.Ecs.Components
 		public ComponentPool<RigidbodyForceMode> ForceModes { get; private set; }
 		public ComponentPool<CharacterControllerRef> CharacterControllers { get; private set; }
 
-		void IWorldRegistry.Initialize(World world)
+		void IComponentAspect.Initialize(World world)
 		{
-			world.AddRegistry(this);
+			world.AddAspect(this);
 			world.AddPool(Cameras = new ComponentPool<CameraRef>());
 			world.AddPool(Sliders = new ComponentPool<SliderRef>());
 			world.AddPool(Animators = new ComponentPool<AnimatorRef>());
@@ -29,6 +29,6 @@ namespace Depra.Ecs.Components
 			world.AddPool(CharacterControllers = new ComponentPool<CharacterControllerRef>());
 		}
 
-		void IWorldRegistry.PostInitialize() { }
+		void IComponentAspect.PostInitialize() { }
 	}
 }
