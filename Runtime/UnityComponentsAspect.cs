@@ -1,8 +1,6 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
 // © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
 
-using Depra.Ecs.Worlds;
-
 namespace Depra.Ecs.Components
 {
 	public sealed class UnityComponentsAspect : IComponentAspect
@@ -12,15 +10,13 @@ namespace Depra.Ecs.Components
 		public ComponentPool<TransformRef> Transforms { get; private set; }
 		public ComponentPool<LineRendererRef> LineRenderers { get; private set; }
 
-		void IComponentAspect.Initialize(World world)
+		void IComponentAspect.Initialize(AspectGroup aspects, ComponentPoolGroup pools)
 		{
-			world.AddAspect(this);
-			world.AddPool(Cameras = new ComponentPool<CameraRef>());
-			world.AddPool(Animators = new ComponentPool<AnimatorRef>());
-			world.AddPool(Transforms = new ComponentPool<TransformRef>());
-			world.AddPool(LineRenderers = new ComponentPool<LineRendererRef>());
+			aspects.Add(this);
+			pools.Add(Cameras = new ComponentPool<CameraRef>());
+			pools.Add(Animators = new ComponentPool<AnimatorRef>());
+			pools.Add(Transforms = new ComponentPool<TransformRef>());
+			pools.Add(LineRenderers = new ComponentPool<LineRendererRef>());
 		}
-
-		void IComponentAspect.PostInitialize() { }
 	}
 }
