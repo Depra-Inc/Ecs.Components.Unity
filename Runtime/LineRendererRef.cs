@@ -1,12 +1,13 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
 // © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
 
-using Depra.Ecs.QoL.Components;
+using System;
 using UnityEngine;
 
 namespace Depra.Ecs.Components
 {
-	public struct LineRendererRef : IComponent
+	[Serializable]
+	public struct LineRendererRef
 	{
 		public LineRenderer Value;
 	}

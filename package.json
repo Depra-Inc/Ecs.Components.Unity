@@ -1,12 +1,11 @@
 {
 	"name": "com.depra.ecs.components.unity",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"displayName": "Depra.Ecs.Components",
 	"description": "Components for Unity types.",
 	"unity": "2022.3",
 	"license": "Apache-2.0",
 	"keywords": [
-		"depra",
 		"ecs",
 		"unity",
 		"components"
