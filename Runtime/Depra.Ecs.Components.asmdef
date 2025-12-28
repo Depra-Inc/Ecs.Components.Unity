@@ -1,14 +1,18 @@
 {
     "name": "Depra.Ecs.Components",
     "rootNamespace": "Depra.Ecs.Components",
-    "references": [],
+    "references": [
+        "GUID:e26e79c2120fe6b48b93f825f9528a77",
+        "GUID:253cfc22f702e854eb8d6e4dce35f072"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
         "Depra.Ecs.dll",
-        "Depra.Ecs.QoL.dll"
+        "Depra.Ecs.QoL.dll",
+        "Depra.Ecs.Modules.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
