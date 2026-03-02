@@ -1,5 +1,5 @@
 ﻿// SPDX-License-Identifier: Apache-2.0
-// © 2023-2024 Nikolay Melnikov <n.melnikov@depra.org>
+// © 2023-2026 Depra <n.melnikov@depra.org>
 
 namespace Depra.Ecs.Components
 {
@@ -12,6 +12,7 @@ namespace Depra.Ecs.Components
 		public ComponentPool<AnimatorRef> Animators { get; private set; }
 		public ComponentPool<TransformRef> Transforms { get; private set; }
 		public ComponentPool<LineRendererRef> LineRenderers { get; private set; }
+		public ComponentPool<TrailRendererRef> TrailRenderer { get; private set; }
 
 		void IComponentAspect.Initialize(AspectGroup aspects, ComponentPoolGroup pools)
 		{
@@ -20,6 +21,7 @@ namespace Depra.Ecs.Components
 			pools.Add(Animators = new ComponentPool<AnimatorRef>());
 			pools.Add(Transforms = new ComponentPool<TransformRef>());
 			pools.Add(LineRenderers = new ComponentPool<LineRendererRef>());
+			pools.Add(TrailRenderer = new ComponentPool<TrailRendererRef>());
 		}
 	}
 }
