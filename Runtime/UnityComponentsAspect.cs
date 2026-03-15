@@ -9,7 +9,6 @@ namespace Depra.Ecs.Components
 		public const string MENU_PATH = nameof(Ecs) + "/" + nameof(Components) + "/";
 
 		public ComponentPool<CameraRef> Cameras { get; private set; }
-		public ComponentPool<AnimatorRef> Animators { get; private set; }
 		public ComponentPool<TransformRef> Transforms { get; private set; }
 		public ComponentPool<LineRendererRef> LineRenderers { get; private set; }
 		public ComponentPool<TrailRendererRef> TrailRenderer { get; private set; }
@@ -18,7 +17,6 @@ namespace Depra.Ecs.Components
 		{
 			aspects.Add(this);
 			pools.Add(Cameras = new ComponentPool<CameraRef>());
-			pools.Add(Animators = new ComponentPool<AnimatorRef>());
 			pools.Add(Transforms = new ComponentPool<TransformRef>());
 			pools.Add(LineRenderers = new ComponentPool<LineRendererRef>());
 			pools.Add(TrailRenderer = new ComponentPool<TrailRendererRef>());
